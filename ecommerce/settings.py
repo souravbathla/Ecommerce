@@ -27,6 +27,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SITE_ID=1
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'innovationtroop@gmail.com'
+EMAIL_HOST_PASSWORD = 'delhivery123'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 
 SITE_ID=1
 
@@ -86,20 +94,11 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'ecommerce',                      # Or path to database file if using sqlite3.
-        'USER': 'ecommerce',                     # Not used with sqlite3.
-        'PASSWORD': 'ecommerce',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-    },
-    # 'default1': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+     }
 }
 
 
@@ -135,12 +134,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.11/howto/static-files/
-
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "statics", "our_static"),)
+
+# STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "static_root")
+
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "statics", "our_statics"),)
 
 
 MEDIA_URL = '/media/'
