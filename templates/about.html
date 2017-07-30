@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MVP: about us</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+{% block content %}
+
+<div class='row'>
+    <iframe class="imageplaceholder" width="300" height="300" src="https://www.youtube.com/embed/PIi1l8TrW8k">
+    </iframe>
+    <div class='com-sm-6 col-sm-offset-3'>
+        <div class="innercontent">
+            <h1>About Us</h1>
+            <p>
+                Innovation Group exist's to improve vision clarity and do everything keeping our customers in mind!
+                It is with this belief we work everyday to help millions improve their vision and lead better lives.
+            </p>
+            <p>
+                Shop from our amazing selection for the latest gadgets at the most affordable prices for all your needs.
+                We order straight from the manufacturer.
+            </p>
+            <p>
+                Our customers receive the best products, expert advice, exceptional customer service and fast deliveries
+                with hassle free returns. At Innovation Group, we want you to live and experience every moment of your life.
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+</body>
+</html>
+
